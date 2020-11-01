@@ -49,7 +49,7 @@ const Comments: React.FC<PropsId> = (props) => {
                 <CardContent>
                   <Typography className={classes.text}>Name: {comments.name}</Typography>
                   <Typography className={classes.text}>Email:{comments.email}</Typography>
-                  <Typography variant="body2">Comment: {comments.body}</Typography>
+                  <Typography className={classes.text}>Comment: {comments.body}</Typography>
                 </CardContent>
               </Card>
             </Grid>

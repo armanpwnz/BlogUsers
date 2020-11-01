@@ -11,7 +11,7 @@ import { IUseParams, IPosts } from '../interfaces'
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     text: {
-      fontSize: 20,
+      fontSize: 16,
       color: 'black',
       fontWeight: 'bolder',
       textTransform: 'uppercase',
@@ -46,7 +46,6 @@ const Posts: React.FC = () => {
               </Typography>
               <hr />
               <Comments id={item.id} />
-              <hr />
             </CardContent>
           </Card>
         )
