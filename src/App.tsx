@@ -1,8 +1,8 @@
 import React from 'react'
-import Home from '../src/components/Home'
-import Header from '../src/components/Header'
+import Home from './components/Home'
+import Header from './components/Header'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import Posts from '../src/components/Posts'
+import Posts from './components/Posts'
 
 function App() {
   return (

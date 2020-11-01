@@ -4,28 +4,31 @@ import Comments from './Comments'
 import Card from '@material-ui/core/Card'
 import CardContent from '@material-ui/core/CardContent'
 import Typography from '@material-ui/core/Typography'
-import { makeStyles } from '@material-ui/core/styles'
+import { makeStyles, Theme, createStyles } from '@material-ui/core/styles'
 import axios from 'axios'
+import { IUseParams, IPosts } from '../interfaces'
 
-const useStyles = makeStyles({
-  text: {
-    fontSize: 20,
-    color: 'black',
-    fontWeight: 'bolder',
-    textTransform: 'uppercase',
-  },
-})
+const useStyles = makeStyles((theme: Theme) =>
+  createStyles({
+    text: {
+      fontSize: 20,
+      color: 'black',
+      fontWeight: 'bolder',
+      textTransform: 'uppercase',
+    },
+  })
+)
 
-const Posts = () => {
+const Posts: React.FC = () => {
   const classes = useStyles()
-  const { id } = useParams()
-  const [post, setPost] = useState([])
+  const { id } = useParams<IUseParams>()
+  const [post, setPost] = useState<IPosts[]>([])
 
   useEffect(() => {
     const url = `https://jsonplaceholder.typicode.com/posts`
     axios(url)
       .then((res) => res.data)
-      .then((posts) => posts.filter((it) => it.userId === +id))
+      .then((posts) => posts.filter((it: { userId: number }) => it.userId === +id))
       .then((data) => setPost(data))
   }, [id])
 

@@ -7,6 +7,7 @@ import { makeStyles } from '@material-ui/core/styles'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 import Button from '@material-ui/core/Button'
+import { IUser } from '../interfaces'
 
 const useStyles = makeStyles({
   root: {
@@ -22,9 +23,9 @@ const useStyles = makeStyles({
   },
 })
 
-const Users = () => {
+const Users: React.FC = () => {
   const classes = useStyles()
-  const [user, setUser] = useState([])
+  const [user, setUser] = useState<IUser[]>([])
 
   useEffect(() => {
     const url = `https://jsonplaceholder.typicode.com/users`
@@ -44,7 +45,7 @@ const Users = () => {
             <Grid item sm={3}>
               <Card className={classes.root}>
                 <CardContent>
-                  <Typography className={classes.text} color="black" gutterBottom>
+                  <Typography className={classes.text} gutterBottom>
                     Name: {users.name}
                   </Typography>
                   <Typography className={classes.text}>Email: {users.email}</Typography>
