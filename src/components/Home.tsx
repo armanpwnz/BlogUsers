@@ -1,6 +1,6 @@
-import React from 'react'
-import Users from './Users'
-import Grid from '@material-ui/core/Grid'
+import React from "react";
+import Grid from "@material-ui/core/Grid";
+import Users from "./Users";
 
 const Home = () => {
   return (
@@ -9,7 +9,7 @@ const Home = () => {
         <Users />
       </Grid>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

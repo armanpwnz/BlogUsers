@@ -1,47 +1,47 @@
 export interface IUser {
-  id: number
-  name: string
-  username: string
-  email: string
+  id: number;
+  name: string;
+  username: string;
+  email: string;
   address: {
-    street: string
-    suite: string
-    city: string
-    zipcode: string
+    street: string;
+    suite: string;
+    city: string;
+    zipcode: string;
     geo: {
-      lat: string
-      lng: string
-    }
-  }
-  phone: string
-  website: string
+      lat: string;
+      lng: string;
+    };
+  };
+  phone: string;
+  website: string;
   company: {
-    name: string
-    catchPhrase: string
-    bs: string
-  }
+    name: string;
+    catchPhrase: string;
+    bs: string;
+  };
 }
 
 export interface IPosts {
-  post: string
-  body: string
-  userId: number
-  id: number
-  title: string
+  post: string;
+  body: string;
+  userId: number;
+  id: number;
+  title: string;
 }
 
 export interface IComments {
-  postId: number
-  id: number
-  name: string
-  email: string
-  body: string
+  postId: number;
+  id: number;
+  name: string;
+  email: string;
+  body: string;
 }
 
 export interface IUseParams {
-  id: string
+  id: string;
 }
 
 export interface PropsId {
-  id: number
+  id: number;
 }

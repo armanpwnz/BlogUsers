@@ -1,8 +1,8 @@
-import React from 'react'
-import { makeStyles, Theme, createStyles } from '@material-ui/core/styles'
-import AppBar from '@material-ui/core/AppBar'
-import Toolbar from '@material-ui/core/Toolbar'
-import Typography from '@material-ui/core/Typography'
+import React from "react";
+import { makeStyles, Theme, createStyles } from "@material-ui/core/styles";
+import AppBar from "@material-ui/core/AppBar";
+import Toolbar from "@material-ui/core/Toolbar";
+import Typography from "@material-ui/core/Typography";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -13,10 +13,10 @@ const useStyles = makeStyles((theme: Theme) =>
       flexGrow: 1,
     },
   })
-)
+);
 
 const Header: React.FC = () => {
-  const classes = useStyles()
+  const classes = useStyles();
 
   return (
     <div className={classes.root}>
@@ -28,6 +28,6 @@ const Header: React.FC = () => {
         </Toolbar>
       </AppBar>
     </div>
-  )
-}
-export default Header
+  );
+};
+export default Header;
