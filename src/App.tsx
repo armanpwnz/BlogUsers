@@ -1,8 +1,8 @@
-import React from 'react'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import Home from './components/Home'
-import Header from './components/Header'
-import Posts from './components/Posts'
+import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Home from "./components/Home";
+import Header from "./components/Header";
+import Posts from "./components/Posts";
 
 const App = () => {
   return (
@@ -13,7 +13,7 @@ const App = () => {
         <Route exact path="/details/:id" component={() => <Posts />} />
       </Switch>
     </Router>
-  )
-}
+  );
+};
 
-export default App
+export default App;
