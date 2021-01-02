@@ -3,11 +3,11 @@ import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
-import { makeStyles, Theme, createStyles } from "@material-ui/core/styles";
+import { makeStyles, createStyles } from "@material-ui/core/styles";
 import axios from "axios";
 import { IComments, PropsId } from "../interfaces";
 
-const useStyles = makeStyles((theme: Theme) =>
+const useStyles = makeStyles(() =>
   createStyles({
     root: {
       minWidth: 275,
@@ -26,6 +26,7 @@ const useStyles = makeStyles((theme: Theme) =>
 const Comments: React.FC<PropsId> = (props) => {
   const classes = useStyles();
   const [comment, setComment] = useState<IComments[]>([]);
+  // eslint-disable-next-line react/prop-types
   const { id } = props;
 
   useEffect(() => {
